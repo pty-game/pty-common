@@ -1,7 +1,12 @@
-export const wsGenerateMessage = (type, payload) => {
+const wsGenerateMessage = (type, payload) => {
   return JSON.stringify({ type, payload });
 };
 
-export const wsParseMessage = (message) => {
+const wsParseMessage = (message) => {
   return JSON.parse(message);
 };
+
+module.exports = {
+  wsGenerateMessage,
+  wsParseMessage
+}
