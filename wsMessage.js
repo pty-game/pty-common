@@ -1,5 +1,11 @@
-const wsGenerateMessage = (type, payload) => {
-  return JSON.stringify({ type, payload });
+const wsGenerateMessage = (type, payload, token) => {
+  const message = { type, payload };
+
+  if (token) {
+    message.token = token;
+  }
+
+  return JSON.stringify(message);
 };
 
 const wsParseMessage = (message) => {
