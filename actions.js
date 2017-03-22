@@ -5,6 +5,14 @@ const estimatorAction = (gameUserId) => {
   }
 };
 
+const playerAction = (file) => {
+  return {
+    instrument: 'dance',
+    file,
+  }
+};
+
 module.exports = {
-  estimatorAction
+  estimatorAction,
+  playerAction,
 }
